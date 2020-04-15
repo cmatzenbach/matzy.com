@@ -2,24 +2,27 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+/* need to figure out how to route to other containers */
 type AppProps = { message: string };
 
+// alternate method, create typings for props on the fly; FC means Functional Component
+/* const App: React.FC<{message: string}> = ({ message }) => { */
 const App = ({ message }: AppProps) => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+        <div className="app">
+            <header className="app-header">
+                <img src={logo} className="app-logo" alt="logo" />
                 <p>
-                    Hello, {message}!
+                    hello, {message}!
                 </p>
-                <p>This is another sample sentence.</p>
+                <p>this is another sample sentence.</p>
                 <a
-                    className="App-link"
+                    className="app-link"
                     href="https://reactjs.org"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Learn React
+                    learn react
                 </a>
             </header>
         </div>
