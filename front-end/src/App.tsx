@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,8 +6,9 @@ import './App.css';
 type AppProps = { message: string };
 
 // alternate method, create typings for props on the fly; FC means Functional Component
-/* const App: React.FC<{message: string}> = ({ message }) => { */
-const App = ({ message }: AppProps) => {
+const [state, setState] = React.useState(0);
+const App: React.FC<{message: string}> = ({ message }) => {
+    /* const App = ({ message }: AppProps) => { */
     return (
         <div className="app">
             <header className="app-header">

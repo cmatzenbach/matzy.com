@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 (ql:quickload :hunchentoot)
 (ql:quickload :easy-routes)
 
