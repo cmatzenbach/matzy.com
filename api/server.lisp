@@ -16,6 +16,6 @@
   (setf (hunchentoot:content-type*) "text/plain")
   (format nil "x: ~a y: ~a z: ~a" x y z))
 
-(easy-routes:defroute food "/faa/:x"
-  ((y :real-name "Y" :init-form 22 :parameter-type 'integer))
+(easy-routes:defroute food "/faa/:x/:y"
+  ((y :real-name "Y" :init-form y :parameter-type 'integer))
   (format nil "~A - ~A" x y))
